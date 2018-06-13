@@ -1,0 +1,7 @@
+import socket
+updsocket=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+bindAddr=("",9999)
+updsocket.bind(bindAddr)
+recvData=updsocket.recvfrom(1024)
+print(recvData)
+updsocket.close()
